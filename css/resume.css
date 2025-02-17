@@ -1,0 +1,322 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --text-dark: #1f2937;
+    --text-light: #4b5563;
+    --bg-light: #f3f4f6;
+    --border-radius: 12px;
+  }
+
+  .resume-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  /* Improved Header Section */
+  .header-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+
+  .name {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .title {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding: 0 10px;
+    line-height: 1.4;
+  }
+
+  /* Redesigned Contact Info */
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    padding: 0 10px;
+    justify-items: center;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-light);
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+
+  .contact-item:hover {
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .contact-item i {
+    min-width: 20px;
+    color: var(--primary-color);
+  }
+
+  .contact-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .contact-item a:hover {
+    color: var(--secondary-color);
+  }
+
+  /* Rest of your existing styles... */
+
+  /* Enhanced Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .header-section {
+      padding: 30px 15px;
+    }
+
+    .contact-info {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .contact-item {
+      justify-content: flex-start;
+      width: 100%;
+      max-width: none;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header-section {
+      padding: 25px 12px;
+    }
+
+    .name {
+      margin-bottom: 8px;
+    }
+
+    .title {
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .contact-item {
+      padding: 6px 8px;
+    }
+  }
+  .section {
+    background: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    animation: fadeInUp 0.5s ease-out;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-title i {
+    color: var(--primary-color);
+  }
+
+  .profile-summary {
+    line-height: 1.8;
+    color: var(--text-light);
+  }
+
+  .education-item {
+    margin-bottom: 25px;
+  }
+
+  .education-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .education-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .institution {
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+
+  .year {
+    color: var(--primary-color);
+    font-weight: 500;
+  }
+
+  .degree {
+    color: var(--text-light);
+    margin-bottom: 8px;
+  }
+
+  .achievements {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .achievements li {
+    color: var(--text-light);
+    margin-bottom: 5px;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .achievements li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .skill-category {
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: var(--border-radius);
+  }
+
+  .skill-category h4 {
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .skill-item {
+    background: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+
+  
+.project-category {
+       margin-bottom: 40px;
+     }
+     
+     .category-title {
+       color: var(--primary-color);
+       font-size: 1.3rem;
+       margin-bottom: 25px;
+       padding-bottom: 10px;
+       border-bottom: 2px solid var(--bg-light);
+     }
+     
+     .project {
+       margin-bottom: 20px;
+     }
+     
+     .project-title {
+       font-weight: bold;
+       font-size: 1.1rem;
+       color: var(--primary-color);
+       transition: color 0.3s;
+     }
+     
+     .project-title:hover {
+       color: var(--secondary-color);
+     }
+
+
+  .languages-list, .interests-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .language-item, .interest-item {
+    background: var(--bg-light);
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: var(--text-light);
+  }
+
+  .extracurricular {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .extracurricular li {
+    color: var(--text-light);
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .extracurricular li::before {
+    content: "→";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header-section {
+      padding: 30px 20px;
+    }
+
+    .contact-info {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  }
